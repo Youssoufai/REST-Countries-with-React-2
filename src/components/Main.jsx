@@ -34,31 +34,22 @@ const Main = () => {
                     <option value="Oceania">Oceania</option>
                 </select>
             </nav>
-            <section
-                className='grid grid-cols-4 space-y-4 space-x-6 items-center justify-center justify-items-center justify-self-center'
-            >
+            <section className='grid grid-cols-4 gap-6 justify-center cursor-pointer'>
                 {countries.map(country => (
-                    <div
-                        key={country.cca3}
-                        className='h-80 bg-DarkBlueDarkModeElements max-w-64 '
-                    >
-                        <img
-                            src={country.flags.png}
-                            alt=""
-                            className=' h-36'
-                        />
+                    <div key={country.cca3} className='flex flex-col h-80 bg-DarkBlueDarkModeElements max-w-64'>
+                        <img src={country.flags.png} alt="" className='h-36' />
                         <div className='p-3'>
                             <p className='text-DarkModeText text-xl py-3'>{country.name.common}</p>
                             <ul>
-                                <li className='text-WhiteDarkModeText'>Population: <span className=' text-DarkWhite'>{country.population}</span></li>
-                                <li className='text-WhiteDarkModeText'>Region: <span className=' text-DarkWhite'>{country.continents}</span></li>
-                                <li className='text-WhiteDarkModeText'>Capital: <span className=' text-DarkWhite'>{country.capital}</span></li>
+                                <li className='text-WhiteDarkModeText'>Population: <span className='text-DarkWhite'>{country.population}</span></li>
+                                <li className='text-WhiteDarkModeText'>Region: <span className='text-DarkWhite'>{country.continents}</span></li>
+                                <li className='text-WhiteDarkModeText'>Capital: <span className='text-DarkWhite'>{country.capital}</span></li>
                             </ul>
                         </div>
                     </div>
-                ))
-                }
+                ))}
             </section>
+
         </main>
     )
 }
