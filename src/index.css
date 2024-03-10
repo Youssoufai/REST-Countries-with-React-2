@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+* {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    padding: .5rem;
+}
